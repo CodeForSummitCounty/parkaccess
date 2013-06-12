@@ -1,0 +1,54 @@
+#park-list {
+	margin-top: 0px;
+	overflow: scroll;
+}
+
+#check {
+	text-align: center;
+	vertical-align: bottom;
+}
+
+#sidebar {
+  float: left;
+  width: 350px;
+  height: 100%;
+  margin-left: -350px;
+  position: relative;
+}
+
+#content {
+  padding-left: 350px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+#right {
+	float: right;
+	height: 60px;
+	background-color: #EEE;
+}
+
+#accordion-menu {
+	float: left;
+	margin-left: 30px;
+}
+#block-map {
+	height: 500px;
+}
+
+#thefooter {
+   position:absolute;
+   bottom:0;
+   left:0;
+   width:100%;
+   height:60px;
+   background: #eee;
+}
+
+#footerquote {
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
