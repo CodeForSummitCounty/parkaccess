@@ -35,7 +35,7 @@ $(document).ready(function() {
 /* Get List of Parks
 ========================================*/
 
-$(.)
+//$(.)
 
 function listparks () {
 
