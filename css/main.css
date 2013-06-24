@@ -1,6 +1,95 @@
+
+
+#main_nav_cont {
+  width: 100%;
+  height: 85px;
+  background: #519445;
+  border-top: 5px solid #182c15;
+}
+ 
+ #logo {
+  vertical-align: left;
+  height: 80px;
+  min-width: 312px;
+  z-index: 3;
+  margin-bottom: 5px;
+  padding-left: 24px;
+}
+
+#lead {
+  max-width: 1024px;
+  height: 80px;
+  padding: 35px 20px;
+}
+
+#lead p {
+  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight: 100; letter-spacing: 1px;
+  font-size: 21px;
+  color: #fff;
+}
+
+/*----------------------------*/
+
+#wrapper {
+  max-width: 95%;
+  height: 100%;
+  margin: 40px auto 0px;
+  background-color: #E0F3DB;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px; /* future proofing */
+    -khtml-border-radius: 2px; /* for old Konqueror browsers */
+}
+
+/* Links ----------------------------*/
+
+a {
+  color: #647864;
+}
+
+a:hover {
+  color: #030303;
+}
+
+/* Accordion ----------------------------*/
+
+#accordion-menu {
+  background-color: #fff;
+  float: left;
+  margin:  20px;
+  background-color: rgba(255,255,255,0.8);5;
+  width: 100%;
+}
+
+
+/* Map ----------------------------*/
+
+
+#block-map {
+  height: 500px;
+  margin: 20px;
+  padding-top: 1px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px; /* future proofing */
+    -khtml-border-radius: 2px; /* for old Konqueror browsers */
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Map ----------------------------*/
+
 #park-list {
 	margin-top: 0px;
 	overflow: scroll;
+}
+
+#nav_green {
+  background-color: #519445;
 }
 
 #check {
@@ -16,13 +105,13 @@
   position: relative;
 }
 
-#content {
-  padding-left: 350px;
+.jumbotron {
+  background-color: #EEE;
+  background-color: rgba(255,255,255,0.8);
 }
 
-#map {
-  width: 100%;
-  height: 100%;
+#content {
+  padding-left: 350px;
 }
 
 #right {
@@ -31,24 +120,24 @@
 	background-color: #EEE;
 }
 
-#accordion-menu {
-	float: left;
-	margin-left: 30px;
-}
-#block-map {
-	height: 500px;
-}
 
 #thefooter {
-   position:absolute;
-   bottom:0;
-   left:0;
-   width:100%;
-   height:60px;
-   background: #eee;
+  margin: 40px auto 0px;
+  width:100%;
+  height: 40px;
+  background-color: #182c15;
 }
 
 #footerquote {
-	margin-top: 10px;
-	margin-bottom: 5px;
+  padding: 10px 40px 0px;
 }
+
+#footerquote p {
+  font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight: 100; letter-spacing: 1px;
+  font-size: 18px;
+  color: #fff;
+}
+
+
+/* Experimental Jetset Rounded Checkbox ----------------------------*/
+
