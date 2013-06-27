@@ -43,27 +43,52 @@
 				<div class="row-fluid">
 					<div class="span4">
 						<div class="accordion" id="accordion-menu">
+							
 							<div class="accordion-group">
+								
 								<div class="accordion-heading">
-									<h5><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-menu" href="#CollapseOne">
-									Step 1: Select 1 or More Park Systems
-									</a></h5>
+									<div class="row-fluid">
+										<img src="assets/step1.png" class="accordion-heading-img"/>
+										
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-menu" href="#CollapseOne">Select One or More Park Systems</a>
+									</div>
 								</div>
-								<div id="CollapseOne" class="accordion-body collapse in">
+
+								<div id="CollapseOne" class="accordion-body collapse in">	
 									<form class="accordion-inner">
-										<label><input class="showhide" type="checkbox" id="Cuyahoga">Cleveland Metroparks</label><br/>
-										<label><input class="showhide" type="checkbox" id="CVNP"> Cuyahoga Valley National Park</label><br/>
-										<label><input class="showhide" type="checkbox" id="Summit"> Metro Parks, Serving Summit County</label><br/>
-										</br>
+										<div class="checkboxOne">
+										<p>Metro Parks Serving Summit County</a>
+										<input type="checkbox" value="1" id="checkboxOneInput" name/>
+										<label for="checkboxOneInput"></label>
+										</div>
+										<div class="checkboxOne">
+										<p>Cuyahoga Valley National Park</a>
+										<input type="checkbox" value="1" id="checkboxTwoInput" name/>
+										<label for="checkboxTwoInput"></label>
+										</div>
+										<div class="checkboxOne">
+										<p>Cleveland Metroparks</a>
+										<input type="checkbox" value="1" id="checkboxThreeInput" name/>
+										<label for="checkboxThreeInput"></label>
+										</div>
+
+
 										<button id="generate-btn" class="btn btn-default btn-block btn" type="submit">Generate Park List</button>
+									
 									</form>
+
 								</div>
 							</div>
 							<div class="accordion-group">
+
 								<div class="accordion-heading">
-									<a class="accordion-toggle" data-toggle="collapse" data-parent="accordion-menu" href="#accordion-menu-item2">
-									<h5>Step 2: Select 1+ Parks</h5></a>
+									<div class="row-fluid">
+										<img src="assets/step2.png" class="accordion-heading-img"/>
+										
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-menu" href="#accordion-menu-item2">Choose Parks to Measure</a>
+									</div>
 								</div>
+
 								<div id="accordion-menu-item2" class="accordion-body collapse">
 									<div class="accordion-inner">
 										<p class="Cuyahoga-parks">Cleveland Metroparks<br/></p>
@@ -74,9 +99,14 @@
 								</div>
 							</div>
 							<div class="accordion-group">
+
 								<div class="accordion-heading">
-									<a class="accordion-toggle" data-toggle="collapse" data-parent="accordion-menu" href="#accordion-menu-item3">
-									<h5>Or Analyze an Address</h5></a>
+									<div class="row-fluid">
+										<img src="assets/step3.png" class="accordion-heading-img"/>
+
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="accordion-menu" href="#accordion-menu-item3">
+										Or Analyze an Address</a>
+									</div>
 								</div>
 								<div id="accordion-menu-item3" class="accordion-body collapse">
 									<div class="accordion-inner">
