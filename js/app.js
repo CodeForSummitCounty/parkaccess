@@ -31,7 +31,7 @@ $(document).ready(function() {
 
   });   
 
-});
+
 
 
 /* Get List of Parks
@@ -52,7 +52,6 @@ $(".Summit")
 /* Accordion List
 ========================================*/
 
-$(document).ready(function() {
   $('.Summit-parks').hide();
   $('.CVNP-parks').hide();
   $('.Cuyahoga-parks').hide();
@@ -111,12 +110,10 @@ $(document).ready(function() {
 
   var currentBlockLayer;
 
-  // WARNING: this doesn't work here: "cartodb.js can't guess the map type"
-  // For some confounding reason it almost works when I stick
-  // it into the first ready() block, but the query is slower than molasses in something frozen.
+  // For some confounding reason it almost works, but the query is slower than molasses in something frozen.
   // Don't know if the speed is a cartodb problem or something else.
   function getTractsWithinDistanceOfMetroPark(metroParkName) {
-    var distance = 1000; // in meters
+    var distance = 10000; // in meters
     var mp_dist_query = "select ST_Distance_Sphere(mpssc_parks.the_geom, census_blocks.the_geom) " + 
       "as distance, " +
       "mpssc_parks.name, " +
