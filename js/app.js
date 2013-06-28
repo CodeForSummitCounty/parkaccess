@@ -84,7 +84,7 @@ $(".Summit")
 
   var endpoint = "http://cfsc.cartodb.com/api/v2/sql/";
 
-  getTractsWithinDistanceOfMetroPark("Springfield Bog");
+  getTractsWithinDistanceOfMetroPark("Sand Run Metro Park");
   getMetroparkList();
 
   // this just gets the list of MPSSC parks. add something below to do something with it
@@ -110,19 +110,18 @@ $(".Summit")
 
   var currentBlockLayer;
 
-  // For some confounding reason it almost works, but the query is slower than molasses in something frozen.
-  // Don't know if the speed is a cartodb problem or something else.
+  // In theory, this should create and display a CartoDB layer with the census blocks
+  // that are within 2600 feet of the supplied SC Metro Park.
+  // Not sure how to configure Cartodb to display the results of this query just yet, 
+  // but it only takes a couple of seconds now.
   function getTractsWithinDistanceOfMetroPark(metroParkName) {
-    var distance = 10000; // in meters
-    var mp_dist_query = "select ST_Distance_Sphere(mpssc_parks.the_geom, census_blocks.the_geom) " + 
-      "as distance, " +
-      "mpssc_parks.name, " +
-      "census_blocks.* " +
-      "from census_blocks, mpssc_parks " +
-      "where ST_Distance_Sphere(mpssc_parks.the_geom, census_blocks.the_geom) " +
-      "< " + distance + " and " +
-      "mpssc_parks.name = 'Springfield Bog' " +
-      "order by distance";
+    var distance = 2600; // in feet
+    var mp_dist_query = "select " + 
+    "ST_Distance(ST_Transform(census_blocks.wkb_geometry,3734),ST_Transform(mpssc_parks.wkb_geometry,3734)) " + 
+    "from census_blocks, mpssc_parks " + 
+    "where mpssc_parks.name='" + metroParkName + "' " +
+    "and ST_Distance(ST_Transform(census_blocks.wkb_geometry,3734),ST_Transform(mpssc_parks.wkb_geometry,3734)) " +
+    " < " + distance;
 
     if (currentBlockLayer) {
       cartodb.removeLayer(currentBlockLayer);
