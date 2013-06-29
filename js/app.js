@@ -11,15 +11,15 @@ $(document).ready(function() {
     attribution: 'Map data © OpenStreetMap contributors'
   }).addTo(map);
 
-  cartodb.createLayer(map, {
-    type: 'cartodb',
-    options: {
-      table_name: 'census_blocks',
-      user_name: 'cfsc'
-    }
-  }).done(function(layer) {
-    map.addLayer(layer);
-  });
+  // cartodb.createLayer(map, {
+  //   type: 'cartodb',
+  //   options: {
+  //     table_name: 'census_blocks',
+  //     user_name: 'cfsc'
+  //   }
+  // }).done(function(layer) {
+  //   map.addLayer(layer);
+  // });
   cartodb.createLayer(map, {
     type: 'cartodb',
     options: {
@@ -116,11 +116,11 @@ $(".Summit")
   // but it only takes a couple of seconds now.
   function getTractsWithinDistanceOfMetroPark(metroParkName) {
     var distance = 2600; // in feet
-    var mp_dist_query = "select " + 
-    "ST_Distance(ST_Transform(census_blocks.wkb_geometry,3734),ST_Transform(mpssc_parks.wkb_geometry,3734)) " + 
+    var mp_dist_query = "select census_blocks.*, " + 
+    "ST_Distance(ST_Transform(census_blocks.the_geom,3734),ST_Transform(mpssc_parks.the_geom,3734)) " + 
     "from census_blocks, mpssc_parks " + 
     "where mpssc_parks.name='" + metroParkName + "' " +
-    "and ST_Distance(ST_Transform(census_blocks.wkb_geometry,3734),ST_Transform(mpssc_parks.wkb_geometry,3734)) " +
+    "and ST_Distance(ST_Transform(census_blocks.the_geom,3734),ST_Transform(mpssc_parks.the_geom,3734)) " +
     " < " + distance;
 
     if (currentBlockLayer) {
