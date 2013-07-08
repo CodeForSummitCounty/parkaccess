@@ -22,103 +22,130 @@
 
 	</head>
 	<body>
-
 		<!-- Navbar 
 		==================== -->
-
-		<div class="navbar navbar-inverse navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				<a class="brand" href="http:/codeforsummitcounty.org">A Code for Summit County Production</a>
+	
+		<div id="main_nav_cont">
+			<div class="row-fluid">
+				<div class="span4">
+					<img id="logo" src="assets/logo_title_green.png"><a href="./index.html"></a>
+				</div>
+				<div class="span8" id="lead">
+					<p>Measure access to the parks and trails of Northeast Ohio</p>
+				</div>
 			</div>
 		</div>
 
-		<!-- Subhead 
-		==================== -->
+			<!-- Accordion Menu
+			==================== -->
 
-		<header class="jumbotron subhead">
-			<div class="container">
-				<h1><a href="./index.html">ParkScore</a></h1>
-				<p class="lead">Measuring access to the parks of Northeast Ohio</p>
-			</div>
-		</header>
+		<div id="wrapper">
+				<div class="row-fluid">
+					<div class="span4">
+						<div class="accordion" id="accordion-menu">
+							
+							<div class="accordion-group">
+								
+								<div class="accordion-heading">
+									<div class="row-fluid">
+										<img src="assets/step1.png" class="accordion-heading-img"/>
+										
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-menu" href="#CollapseOne">Select One or More Park Systems</a>
+									</div>
+								</div>
 
-		<div class="container"></div>
-			<div class="row-fluid">
+								<div id="CollapseOne" class="accordion-body collapse in">	
+									<form class="accordion-inner">
+										<div class="checkboxOne">
+										<p>Metro Parks Serving Summit County</a>
+										<input type="checkbox" value="1" id="checkboxOneInput" name/>
+										<label for="checkboxOneInput"></label>
+										</div>
+										<div class="checkboxOne">
+										<p>Cuyahoga Valley National Park</a>
+										<input type="checkbox" value="1" id="checkboxTwoInput" name/>
+										<label for="checkboxTwoInput"></label>
+										</div>
+										<div class="checkboxOne">
+										<p>Cleveland Metroparks</a>
+										<input type="checkbox" value="1" id="checkboxThreeInput" name/>
+										<label for="checkboxThreeInput"></label>
+										</div>
 
-				<div class="span4">
-					<div class="accordion" id="accordion-menu">
 
-						<div class="accordion-group">
-							<div class="accordion-heading">
-								<h5><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-menu" href="#CollapseOne">
-									Step 1: Select 1 or More Park Systems
-								</a></h5>
-							</div>
-							<div id="CollapseOne" class="accordion-body collapse in">
-								<form class="accordion-inner">
-									<input class="showhide" type="checkbox" id="Cuyahoga"> Cleveland Metroparks<br/>
-									<input class="showhide" type="checkbox" id="CVNP"> Cuyahoga Valley National Park<br/>
-									<input class="showhide" type="checkbox" id="Summit"> Metro Parks, Serving Summit County<br/>
-								</br>
-									<button id="generate-btn" class="btn btn-default btn-block btn" type="submit">Generate Park List</button>
-								</form>
-							</div>
-						</div>
+										<button id="generate-btn" class="btn btn-default btn-block btn" type="submit">Generate Park List</button>
+									
+									</form>
 
-						<div class="accordion-group">
-							<div class="accordion-heading">
-								<a class="accordion-toggle" data-toggle="collapse" data-parent="accordion-menu" href="#accordion-menu-item2">
-									<h5>Step 2: Select 1+ Parks</h5>
-								</a>
-							</div>
-							<div id="accordion-menu-item2" class="accordion-body collapse">
-								<div class="accordion-inner">
-									<p class="Cuyahoga-parks">Cleveland Metroparks<br/></p>
-									<p class="CVNP-parks">CVNP Parks<br/></p>
-									<p class="Summit-parks">Metro Parks Serving Summit County Parks<br/><p>
-								</br>
-									<button id="measure-btn" class="btn btn-default btn-block btn-primary" type="submit">Measure Access!</button>	
 								</div>
 							</div>
-						</div>
+							<div class="accordion-group">
 
-						<div class="accordion-group">
-							<div class="accordion-heading">
-								<a class="accordion-toggle" data-toggle="collapse" data-parent="accordion-menu" href="#accordion-menu-item3">
-									<h5>Or Analyze an Address</h5>
-								</a>
+								<div class="accordion-heading">
+									<div class="row-fluid">
+										<img src="assets/step2.png" class="accordion-heading-img"/>
+										
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-menu" href="#accordion-menu-item2">Choose Parks to Measure</a>
+									</div>
+								</div>
+
+								<div id="accordion-menu-item2" class="accordion-body collapse">
+									<div class="accordion-inner">
+										<p class="Cuyahoga-parks">Cleveland Metroparks<br/></p>
+										<p class="CVNP-parks">CVNP Parks<br/></p>
+										<p class="Summit-parks">Metro Parks Serving Summit County Parks<br/><p>
+										<button id="measure-btn" class="btn btn-default btn-block btn-primary" type="submit">Measure Access!</button>	
+									</div>
+								</div>
 							</div>
-							<div id="accordion-menu-item3" class="accordion-body collapse">
-								<div class="accordion-inner">
-									<div class="input-append">
-										<input id="appendedInputButton" type="text">
-										<button class="btn" type="button">Search</button>
+							<div class="accordion-group">
+
+								<div class="accordion-heading">
+									<div class="row-fluid">
+										<img src="assets/step3.png" class="accordion-heading-img"/>
+
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="accordion-menu" href="#accordion-menu-item3">
+										Or Analyze an Address</a>
+									</div>
+								</div>
+								<div id="accordion-menu-item3" class="accordion-body collapse">
+									<div class="accordion-inner">
+										<div class="input-append">
+											<input id="appendedInputButton" type="text">
+											<button class="btn" type="button">Search</button>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="span8">
-					<section id="block-map">
-						<div id="map">
-						</div>
-					</section>
+				<!-- The Map
+				==================== -->
+
+					<div class="span8">
+						<section id="block-map">
+							<div id="map">
+							</div>
+						</section>
+					</div>
+				
+					<!-- The Future
+					==================== -->
+
 				</div>
 			</div>
 		</div>
 	</body>
 
+	<!-- Background Photo 
+	==================== --> 
+
+
+
 	<footer id="thefooter">
-		<div id="footerquote" class="container">
-			<h5>Built with love by <a href="http://codeforsummitcounty.org" target="_blank">Code for Summit County</h5>
+		<div id="footerquote">
+			<p>Built with love by <a href="http://codeforsummitcounty.org" target="_blank">Code for Summit County</p>
 		</div>
 	</footer>
 
